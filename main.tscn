@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ceysqal36j41k"]
+
+[ext_resource type="Script" uid="uid://ddoxuog3iw32" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://c7hsirxd48wdr" path="res://game_world.gd" id="2_1bvp3"]
+
+[node name="Main" type="Node" unique_id=1791924771]
+script = ExtResource("1_h2yge")
+
+[node name="GameWorld" type="Node2D" parent="." unique_id=1425223300]
+script = ExtResource("2_1bvp3")
+
+[node name="GUI" type="Control" parent="." unique_id=2074802470]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
