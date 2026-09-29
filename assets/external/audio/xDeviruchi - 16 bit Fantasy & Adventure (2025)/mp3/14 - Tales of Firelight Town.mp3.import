@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6c181w3n7yer"
+path="res://.godot/imported/14 - Tales of Firelight Town.mp3-a235cf1d99b06353b99707168cd31d73.mp3str"
+
+[deps]
+
+source_file="res://assets/external/audio/xDeviruchi - 16 bit Fantasy & Adventure (2025)/mp3/14 - Tales of Firelight Town.mp3"
+dest_files=["res://.godot/imported/14 - Tales of Firelight Town.mp3-a235cf1d99b06353b99707168cd31d73.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

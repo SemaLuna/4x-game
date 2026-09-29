@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cgtl0gjaignqs"
+path="res://.godot/imported/01 - Falling Apart (Prologue).ogg-2269d5a5dd0bf9ac8bc8c6f6d401d32c.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/external/audio/xDeviruchi - 16 bit Fantasy & Adventure (2025)/Loopable + one shots/ogg/01 - Falling Apart (Prologue).ogg"
+dest_files=["res://.godot/imported/01 - Falling Apart (Prologue).ogg-2269d5a5dd0bf9ac8bc8c6f6d401d32c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

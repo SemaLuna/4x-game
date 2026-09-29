@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://rxulrnbr25wx"
+path="res://.godot/imported/08 - Shop.ogg-7e825fc5f6d01bcb7b4b8ad7af04d4a0.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/external/audio/xDeviruchi - 16 bit Fantasy & Adventure (2025)/Loopable + one shots/ogg/08 - Shop.ogg"
+dest_files=["res://.godot/imported/08 - Shop.ogg-7e825fc5f6d01bcb7b4b8ad7af04d4a0.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

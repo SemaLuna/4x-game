@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dslxa62b37feh"
+path="res://.godot/imported/01 - Falling Apart (Prologue).mp3-3c2d86e530aba26446bbe88664c4f18d.mp3str"
+
+[deps]
+
+source_file="res://assets/external/audio/xDeviruchi - 16 bit Fantasy & Adventure (2025)/mp3/01 - Falling Apart (Prologue).mp3"
+dest_files=["res://.godot/imported/01 - Falling Apart (Prologue).mp3-3c2d86e530aba26446bbe88664c4f18d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

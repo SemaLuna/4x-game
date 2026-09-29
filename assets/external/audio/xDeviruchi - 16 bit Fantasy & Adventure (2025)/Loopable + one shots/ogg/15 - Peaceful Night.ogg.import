@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b1wyeja6usio1"
+path="res://.godot/imported/15 - Peaceful Night.ogg-a41f7144a3e4c02dafd88fcf310ea767.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/external/audio/xDeviruchi - 16 bit Fantasy & Adventure (2025)/Loopable + one shots/ogg/15 - Peaceful Night.ogg"
+dest_files=["res://.godot/imported/15 - Peaceful Night.ogg-a41f7144a3e4c02dafd88fcf310ea767.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

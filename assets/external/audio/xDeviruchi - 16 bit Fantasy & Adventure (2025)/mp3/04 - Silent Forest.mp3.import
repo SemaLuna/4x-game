@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://md6j6mb2lviu"
+path="res://.godot/imported/04 - Silent Forest.mp3-273663a4a0e9f7e74b1f0693508b13b2.mp3str"
+
+[deps]
+
+source_file="res://assets/external/audio/xDeviruchi - 16 bit Fantasy & Adventure (2025)/mp3/04 - Silent Forest.mp3"
+dest_files=["res://.godot/imported/04 - Silent Forest.mp3-273663a4a0e9f7e74b1f0693508b13b2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cgxkleupq1ie"
+path="res://.godot/imported/20 - The Journey.ogg-f6a6a484d385c6043bccdb1d8043df9f.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/external/audio/xDeviruchi - 16 bit Fantasy & Adventure (2025)/Loopable + one shots/ogg/20 - The Journey.ogg"
+dest_files=["res://.godot/imported/20 - The Journey.ogg-f6a6a484d385c6043bccdb1d8043df9f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
