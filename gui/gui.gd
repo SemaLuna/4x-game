@@ -3,4 +3,9 @@ extends Control
 const MAIN_MENU_SCENE = preload("res://gui/menus/main_menu.tscn")
 
 func _ready() -> void:
-	add_child(MAIN_MENU_SCENE.instantiate())
+	var scene = MAIN_MENU_SCENE.instantiate()
+	add_child(scene)
+	scene.start_combat.connect(_on_start_combat)
+
+func _on_start_combat() -> void:
+	print("Combat has started!")
