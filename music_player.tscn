@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dxoohwvwajvj0"]
+
+[ext_resource type="AudioStream" uid="uid://dslxa62b37feh" path="res://assets/external/audio/xDeviruchi - 16 bit Fantasy & Adventure (2025)/mp3/01 - Falling Apart (Prologue).mp3" id="1_fvyft"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" unique_id=476786734]
+stream = ExtResource("1_fvyft")
+autoplay = true
