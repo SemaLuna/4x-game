@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ddoxuog3iw32" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://c7hsirxd48wdr" path="res://game_world.gd" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://obgvkowt8fi4" path="res://gui/gui.gd" id="3_h2yge"]
 
 [node name="Main" type="Node" unique_id=1791924771]
 script = ExtResource("1_h2yge")
@@ -11,6 +12,15 @@ script = ExtResource("2_1bvp3")
 
 [node name="GUI" type="Control" parent="." unique_id=2074802470]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_h2yge")

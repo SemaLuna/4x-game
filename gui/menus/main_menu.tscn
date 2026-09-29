@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dkruv8b44delk"]
+
+[ext_resource type="Script" uid="uid://brigpsw27r62g" path="res://gui/menus/quit.gd" id="1_xk52o"]
+
+[node name="MainMenu" type="CenterContainer" unique_id=1229973417]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Quit" type="Button" parent="." unique_id=1683070438]
+layout_mode = 2
+text = "Quit"
+script = ExtResource("1_xk52o")
+
+[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]
