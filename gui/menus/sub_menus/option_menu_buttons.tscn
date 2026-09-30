@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b6ewgd62n8tnp"]
+
+[ext_resource type="Script" uid="uid://nbin6a1rnjfs" path="res://gui/menus/sub_menus/option_menu_buttons.gd" id="1_y56et"]
+[ext_resource type="Script" uid="uid://co5dd52gb5i6y" path="res://gui/menus/sub_menus/slider.gd" id="2_lp5p5"]
+
+[node name="OptionMenuButtons" type="VBoxContainer" unique_id=1090246467]
+script = ExtResource("1_y56et")
+
+[node name="Volume" type="HBoxContainer" parent="." unique_id=25563120]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Volume" unique_id=1942439123]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="Slider" type="HSlider" parent="Volume" unique_id=1538615545]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_vertical = 4
+script = ExtResource("2_lp5p5")
+
+[node name="HSeparator" type="HSeparator" parent="." unique_id=1734673348]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="." unique_id=1600893804]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back"
+
+[connection signal="value_changed" from="Volume/Slider" to="Volume/Slider" method="_on_value_changed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
