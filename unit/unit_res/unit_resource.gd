@@ -7,4 +7,4 @@ extends Resource
 @export var max_health: int
 @export var initiative: int
 @export var actions: Array[Resource]
-#@export var sprite: AnimatedSprite2D
+#TODO @export var sprite: AnimatedSprite2D???

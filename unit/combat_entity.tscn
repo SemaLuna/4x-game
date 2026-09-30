@@ -2,18 +2,8 @@
 
 [ext_resource type="Script" uid="uid://lf43bydd2d7c" path="res://unit/combat_entity.gd" id="1_gam5a"]
 [ext_resource type="Texture2D" uid="uid://0xsoas0osp1f" path="res://assets/external/visual/Cute_Fantasy_Free/Player/Player.png" id="2_86o6t"]
-
-[sub_resource type="Gradient" id="Gradient_hy15m"]
-offsets = PackedFloat32Array(0, 0, 1)
-colors = PackedColorArray(0.14348999, 0.9999998, 0.12722558, 1, 1.3356283e-06, 0.49469668, 0, 1, 0.005698413, 0.22133121, 1.1310726e-06, 1)
-metadata/_snap_enabled = true
-metadata/_snap_count = 8
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_sepsr"]
-gradient = SubResource("Gradient_hy15m")
-width = 100
-height = 30
-fill_from = Vector2(0, 0.9938838)
+[ext_resource type="Script" uid="uid://b0d68q3ydd4wa" path="res://unit/health.gd" id="2_sepsr"]
+[ext_resource type="Texture2D" uid="uid://bxfk4nwhkoofu" path="res://unit/unit_res/tres/green_health.tres" id="3_7slsa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hy15m"]
 atlas = ExtResource("2_86o6t")
@@ -184,13 +174,13 @@ script = ExtResource("1_gam5a")
 [node name="Action" type="Node" parent="." unique_id=1616346681]
 
 [node name="Health" type="Node" parent="." unique_id=1496972666]
+script = ExtResource("2_sepsr")
 
 [node name="HealthContainer" type="CenterContainer" parent="Health" unique_id=1870518565]
-offset_left = -51.0
-offset_top = 60.0
-offset_right = 49.0
-offset_bottom = 100.0
-metadata/_edit_group_ = true
+offset_left = 373.0
+offset_top = 359.0
+offset_right = 473.0
+offset_bottom = 399.0
 
 [node name="HealthBar" type="TextureProgressBar" parent="Health/HealthContainer" unique_id=2062696747]
 custom_minimum_size = Vector2(80, 20)
@@ -198,31 +188,22 @@ layout_mode = 2
 size_flags_vertical = 4
 value = 100.0
 rounded = true
-texture_progress = SubResource("GradientTexture2D_sepsr")
+texture_progress = ExtResource("3_7slsa")
 
-[node name="RemainingHitPoints" type="Label" parent="Health/HealthContainer/HealthBar" unique_id=667727658]
+[node name="HealthLabel" type="Label" parent="Health/HealthContainer" unique_id=667727658]
 custom_minimum_size = Vector2(80, 20)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -40.0
-offset_top = -24.5
-offset_right = 40.0
-offset_bottom = 24.5
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Experience" type="Node" parent="." unique_id=542867377]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=413445055]
-position = Vector2(3.0517578e-05, -0.9999695)
+[node name="CombatSprite" type="AnimatedSprite2D" parent="." unique_id=413445055]
+position = Vector2(420, 295)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_7slsa")
 animation = &"move"
 autoplay = "idle"
+frame = 5
+frame_progress = 0.8792457
