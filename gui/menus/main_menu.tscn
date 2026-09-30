@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://lku7361duywx" path="res://gui/menus/main_menu.gd" id="1_at0em"]
 [ext_resource type="Script" uid="uid://brigpsw27r62g" path="res://gui/menus/quit.gd" id="1_xk52o"]
-[ext_resource type="Script" uid="uid://co5dd52gb5i6y" path="res://gui/menus/slider.gd" id="3_7o4j2"]
+[ext_resource type="PackedScene" uid="uid://b6ewgd62n8tnp" path="res://gui/menus/sub_menus/option_menu_buttons.tscn" id="3_7o4j2"]
 
 [node name="MainMenu" type="CenterContainer" unique_id=1229973417]
 anchors_preset = 15
@@ -20,6 +20,10 @@ layout_mode = 2
 layout_mode = 2
 text = "Start Combat"
 
+[node name="StartShopping" type="Button" parent="MainMenuButtons" unique_id=13365269]
+layout_mode = 2
+text = "Start Shopping"
+
 [node name="Options" type="Button" parent="MainMenuButtons" unique_id=345873185]
 layout_mode = 2
 text = "Options"
@@ -29,34 +33,12 @@ layout_mode = 2
 text = "Quit"
 script = ExtResource("1_xk52o")
 
-[node name="OptionMenuButtons" type="VBoxContainer" parent="." unique_id=1472751069]
+[node name="OptionMenuButtons" parent="." unique_id=1090246467 instance=ExtResource("3_7o4j2")]
 visible = false
 layout_mode = 2
 
-[node name="Volume" type="HBoxContainer" parent="OptionMenuButtons" unique_id=7325117]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="OptionMenuButtons/Volume" unique_id=805384205]
-layout_mode = 2
-text = "Music Volume"
-
-[node name="Slider" type="HSlider" parent="OptionMenuButtons/Volume" unique_id=339522972]
-custom_minimum_size = Vector2(250, 0)
-layout_mode = 2
-size_flags_vertical = 4
-script = ExtResource("3_7o4j2")
-
-[node name="HSeparator" type="HSeparator" parent="OptionMenuButtons" unique_id=213897185]
-layout_mode = 2
-
-[node name="Back" type="Button" parent="OptionMenuButtons" unique_id=256547369]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 4
-text = "Back"
-
 [connection signal="pressed" from="MainMenuButtons/StartCombat" to="." method="_on_start_combat_pressed"]
+[connection signal="pressed" from="MainMenuButtons/StartShopping" to="." method="_on_start_shopping_pressed"]
 [connection signal="pressed" from="MainMenuButtons/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MainMenuButtons/Quit" to="MainMenuButtons/Quit" method="_on_pressed"]
-[connection signal="value_changed" from="OptionMenuButtons/Volume/Slider" to="OptionMenuButtons/Volume/Slider" method="_on_value_changed"]
-[connection signal="pressed" from="OptionMenuButtons/Back" to="." method="_on_back_pressed"]
+[connection signal="back_button_pressed" from="OptionMenuButtons" to="." method="_on_option_menu_buttons_back_button_pressed"]
