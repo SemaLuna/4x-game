@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_ssxii")
 unit_name = "Squire"
-base_level = 1
+current_level = 1
 xp_to_level = 100
 xp_on_death = 20
 max_health = 100
