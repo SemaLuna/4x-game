@@ -1,108 +1,104 @@
-[gd_scene format=3 uid="uid://bqbx4dmiirypo"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://00877x1wkl23"]
 
-[ext_resource type="Script" uid="uid://lf43bydd2d7c" path="res://unit/combat_entity.gd" id="1_gam5a"]
-[ext_resource type="Texture2D" uid="uid://0xsoas0osp1f" path="res://assets/external/visual/Cute_Fantasy_Free/Player/Player.png" id="2_86o6t"]
-[ext_resource type="Script" uid="uid://buphulqgsqh2q" path="res://unit/action.gd" id="2_bi11c"]
-[ext_resource type="Script" uid="uid://b0d68q3ydd4wa" path="res://unit/health.gd" id="2_sepsr"]
-[ext_resource type="Texture2D" uid="uid://bxfk4nwhkoofu" path="res://unit/unit_res/tres/green_health.tres" id="3_7slsa"]
+[ext_resource type="Texture2D" uid="uid://0xsoas0osp1f" path="res://assets/external/visual/Cute_Fantasy_Free/Player/Player.png" id="1_hw2vu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hy15m"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(0, 224, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3k25b"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(32, 224, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hs7ws"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(64, 224, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a2j7n"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(96, 224, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j0e0d"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(0, 288, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5dfwp"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(32, 288, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eras8"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(64, 288, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_syn0d"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(96, 288, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f2ixw"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(96, 288, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u8l63"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(64, 288, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u6sdi"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(32, 288, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ac1ta"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(0, 288, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_japly"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s1ym6"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7oxhv"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(64, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2ul3e"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(96, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a3q01"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(128, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4xbu7"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(160, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1quw1"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(0, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5bqrp"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(32, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ruv6"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(64, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8g03q"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(96, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lawvu"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(128, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_calgj"]
-atlas = ExtResource("2_86o6t")
+atlas = ExtResource("1_hw2vu")
 region = Rect2(160, 128, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_bi11c"]
+[resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -201,48 +197,3 @@ animations = [{
 "name": &"move",
 "speed": 5.0
 }]
-
-[node name="CombatEntity" type="Node" unique_id=1999106551]
-script = ExtResource("1_gam5a")
-
-[node name="Action" type="Node" parent="." unique_id=1616346681]
-script = ExtResource("2_bi11c")
-
-[node name="Health" type="Node" parent="." unique_id=1496972666]
-script = ExtResource("2_sepsr")
-
-[node name="HealthContainer" type="CenterContainer" parent="Health" unique_id=1870518565]
-offset_left = 373.0
-offset_top = 359.0
-offset_right = 473.0
-offset_bottom = 399.0
-
-[node name="HealthBar" type="TextureProgressBar" parent="Health/HealthContainer" unique_id=2062696747]
-custom_minimum_size = Vector2(80, 20)
-layout_mode = 2
-size_flags_vertical = 4
-value = 100.0
-rounded = true
-texture_progress = ExtResource("3_7slsa")
-
-[node name="HealthLabel" type="Label" parent="Health/HealthContainer" unique_id=667727658]
-custom_minimum_size = Vector2(80, 20)
-layout_mode = 2
-mouse_filter = 0
-text = "100"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Experience" type="Node" parent="." unique_id=542867377]
-
-[node name="CombatSprite" type="AnimatedSprite2D" parent="." unique_id=854922376]
-position = Vector2(425.00003, 310)
-scale = Vector2(5, 5)
-sprite_frames = SubResource("SpriteFrames_bi11c")
-animation = &"idle"
-autoplay = "idle"
-
-[connection signal="death" from="Health" to="." method="_on_death"]
-[connection signal="survive" from="Health" to="." method="_on_survive"]
-[connection signal="mouse_entered" from="Health/HealthContainer/HealthLabel" to="Health" method="_on_health_label_mouse_entered"]
-[connection signal="mouse_exited" from="Health/HealthContainer/HealthLabel" to="Health" method="_on_health_label_mouse_exited"]

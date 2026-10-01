@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://bqbx4dmiirypo"]
+
+[ext_resource type="Script" uid="uid://lf43bydd2d7c" path="res://units/unit.gd" id="1_gam5a"]
+[ext_resource type="SpriteFrames" uid="uid://00877x1wkl23" path="res://resources/units/squire/squire_animations.tres" id="2_hkgx6"]
+[ext_resource type="Script" uid="uid://b0d68q3ydd4wa" path="res://units/health.gd" id="2_sepsr"]
+[ext_resource type="Script" uid="uid://c3jwlydaaltp4" path="res://units/combat_sprite.gd" id="3_33c7x"]
+[ext_resource type="Texture2D" uid="uid://bxfk4nwhkoofu" path="res://resources/health_bar/green_health.tres" id="4_33c7x"]
+[ext_resource type="Texture2D" uid="uid://cahnetyjv118p" path="res://resources/health_bar/black_health.tres" id="5_3nj72"]
+
+[node name="Unit" type="VBoxContainer" unique_id=1113254045]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = -480.0
+offset_bottom = -166.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gam5a")
+
+[node name="Model" type="Control" parent="." unique_id=438150957]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="CombatSprite" type="AnimatedSprite2D" parent="Model" unique_id=854922376]
+scale = Vector2(5, 5)
+sprite_frames = ExtResource("2_hkgx6")
+animation = &"attack"
+centered = false
+script = ExtResource("3_33c7x")
+
+[node name="Health" type="Control" parent="." unique_id=297384164]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+script = ExtResource("2_sepsr")
+
+[node name="HealthContainer" type="CenterContainer" parent="Health" unique_id=1870518565]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -15.0
+offset_right = 50.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HealthBar" type="TextureProgressBar" parent="Health/HealthContainer" unique_id=2062696747]
+custom_minimum_size = Vector2(80, 20)
+layout_mode = 2
+size_flags_vertical = 4
+value = 100.0
+rounded = true
+texture_under = ExtResource("5_3nj72")
+texture_progress = ExtResource("4_33c7x")
+
+[node name="HealthLabel" type="Label" parent="Health/HealthContainer" unique_id=667727658]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+mouse_filter = 0
+text = "HP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Action" type="Node" parent="." unique_id=1616346681]
+
+[node name="Experience" type="Node" parent="." unique_id=542867377]
+
+[connection signal="mouse_entered" from="Health/HealthContainer/HealthLabel" to="Health" method="_on_health_label_mouse_entered"]
+[connection signal="mouse_exited" from="Health/HealthContainer/HealthLabel" to="Health" method="_on_health_label_mouse_exited"]
