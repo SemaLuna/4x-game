@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bqbx4dmiirypo"]
+
+[ext_resource type="Script" uid="uid://lf43bydd2d7c" path="res://unit/unit.gd" id="1_s1ym6"]
+[ext_resource type="Script" uid="uid://b0d68q3ydd4wa" path="res://unit/health.gd" id="2_7oxhv"]
+[ext_resource type="Texture2D" uid="uid://1u4gjf8lrjjl" path="res://unit/resources/tres/red_health.tres" id="3_2ul3e"]
+[ext_resource type="Texture2D" uid="uid://bxfk4nwhkoofu" path="res://unit/resources/tres/green_health.tres" id="4_a3q01"]
+
+[node name="Unit" type="Node" unique_id=1999106551]
+script = ExtResource("1_s1ym6")
+
+[node name="Action" type="Node" parent="." unique_id=1616346681]
+
+[node name="Health" type="Node" parent="." unique_id=1496972666]
+script = ExtResource("2_7oxhv")
+
+[node name="HealthContainer" type="CenterContainer" parent="Health" unique_id=1870518565]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HealthBar" type="TextureProgressBar" parent="Health/HealthContainer" unique_id=2062696747]
+custom_minimum_size = Vector2(80, 20)
+layout_mode = 2
+size_flags_vertical = 4
+value = 100.0
+rounded = true
+texture_under = ExtResource("3_2ul3e")
+texture_progress = ExtResource("4_a3q01")
+
+[node name="HealthLabel" type="Label" parent="Health/HealthContainer" unique_id=667727658]
+custom_minimum_size = Vector2(80, 20)
+layout_mode = 2
+mouse_filter = 0
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Experience" type="Node" parent="." unique_id=542867377]
+
+[node name="CombatSprite" type="AnimatedSprite2D" parent="." unique_id=854922376]
+position = Vector2(642, 245)
+scale = Vector2(5, 5)
+
+[node name="Timer" type="Timer" parent="." unique_id=133247949]
+wait_time = 2.0
+autostart = true
+
+[connection signal="death" from="Health" to="." method="_on_death"]
+[connection signal="survive" from="Health" to="." method="_on_survive"]
+[connection signal="mouse_entered" from="Health/HealthContainer/HealthLabel" to="Health" method="_on_health_label_mouse_entered"]
+[connection signal="mouse_exited" from="Health/HealthContainer/HealthLabel" to="Health" method="_on_health_label_mouse_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

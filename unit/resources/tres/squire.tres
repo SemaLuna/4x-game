@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="UnitResource" format=3 uid="uid://c5m6yyrqcfi0r"]
+
+[ext_resource type="SpriteFrames" uid="uid://descgqijdwolf" path="res://unit/resources/animations/squire_animation.tres" id="1_clauo"]
+[ext_resource type="Script" uid="uid://de12ftul028du" path="res://unit/resources/unit_resource.gd" id="1_ssxii"]
+
+[resource]
+script = ExtResource("1_ssxii")
+unit_name = "Squire"
+max_health = 100
+current_health = 50
+animations = ExtResource("1_clauo")

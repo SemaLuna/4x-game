@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://ddoxuog3iw32" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://c7hsirxd48wdr" path="res://game_world.gd" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://obgvkowt8fi4" path="res://gui/gui.gd" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bqbx4dmiirypo" path="res://unit/unit.tscn" id="4_lquwl"]
+[ext_resource type="Resource" uid="uid://03w38ylp81nv" path="res://unit/resources/tres/imp.tres" id="5_7mycd"]
 
 [node name="Main" type="Node" unique_id=1791924771]
 script = ExtResource("1_h2yge")
@@ -24,3 +26,6 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_h2yge")
+
+[node name="Unit" parent="." unique_id=1999106551 instance=ExtResource("4_lquwl")]
+base_unit_resource = ExtResource("5_7mycd")
