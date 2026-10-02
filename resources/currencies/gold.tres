@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_5fq3h")
 name = "Gold"
-stockpile = 500
+amount = 500
 income = 10
 upkeep = -2
 icon = ExtResource("1_3fvhs")

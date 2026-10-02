@@ -1,5 +1,5 @@
-extends Resource
 class_name UnitResource
+extends Resource
 
 signal died
 signal hurt
