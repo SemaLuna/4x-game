@@ -21,3 +21,10 @@ func update_health(amount: int):
 func _on_death():
 	await sprite.animation_finished
 	queue_free()
+
+func complete_action(action: UnitActionResource):
+	#TODO use the given action
+	sprite.play("attack")
+
+func get_action():
+	return unit_resource.actions

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="UnitActionResource" format=3 uid="uid://t0h46ep8pxe4"]
+
+[ext_resource type="Script" uid="uid://bfjk6rjnd8bcc" path="res://resources/effects/effect_resource.gd" id="1_uskfc"]
+[ext_resource type="Script" uid="uid://dr17adaabc4ry" path="res://resources/units/unit_action_resource.gd" id="2_70vrx"]
+[ext_resource type="Script" uid="uid://ci1ypu4k1l7dk" path="res://resources/effects/damage_effect_resource.gd" id="2_ql25p"]
+
+[sub_resource type="Resource" id="Resource_ql25p"]
+script = ExtResource("2_ql25p")
+damage = 40
+metadata/_custom_type_script = "uid://ci1ypu4k1l7dk"
+
+[resource]
+script = ExtResource("2_70vrx")
+action_name = "Sword Slash"
+description = "The squire swings their sword"
+effects = Array[ExtResource("1_uskfc")]([SubResource("Resource_ql25p")])
+metadata/_custom_type_script = "uid://dr17adaabc4ry"
