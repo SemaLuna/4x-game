@@ -22,10 +22,12 @@ signal hurt
 
 ## The sprites representing the various animations of the unit
 @export var animations: SpriteFrames = preload('res://resources/units/squire/squire_animations.tres')
+## The actions this unit can take
+@export var actions: Array[UnitActionResource]
+
 
 # TODO
 # @export var current_level: int
 # @export var xp_to_level: int
 # @export var xp_on_death: int
 # @export var initiative: int
-# @export var actions: Array[Resource]
