@@ -1,15 +1,15 @@
 extends Control
 
-const MAIN_MENU_SCENE = preload("res://gui/menus/main_menu.tscn")
+var GUI_MAP: Dictionary[Utils.SceneNames, String] = {
+	Utils.SceneNames.Main: "res://gui/menus/main_menu.tscn"
+}
 
-func _ready() -> void:
-	var scene = MAIN_MENU_SCENE.instantiate()
-	add_child(scene)
-	scene.start_combat.connect(_on_start_combat)
-	scene.start_shop.connect(_on_start_shop)
-
-func _on_start_combat() -> void:
-	print("Combat has started!")
-
-func _on_start_shop() -> void:
-	print("Shop has started!")
+func change_gui(scene_name: Utils.SceneNames):
+	# TODO remove this line once we have an interface for each scene
+	if (GUI_MAP.has(scene_name)):
+		var scene = load(GUI_MAP[scene_name])
+		var instance = scene.instantiate()
+		if (get_child_count() > 0):
+			var current_gui = get_child(0)
+			current_gui.queue_free()
+		add_child(instance)
