@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="FactionResource" format=3 uid="uid://b6sres1b50lga"]
+
+[ext_resource type="Script" uid="uid://s3f8l4jsq2ra" path="res://resources/factions/faction_resource.gd" id="1_seebn"]
+
+[resource]
+script = ExtResource("1_seebn")
+name = "Hopping Frogs"
+metadata/_custom_type_script = "uid://s3f8l4jsq2ra"

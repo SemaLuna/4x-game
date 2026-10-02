@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CurrencyResource" format=3 uid="uid://cl2s0bmvsssom"]
+
+[ext_resource type="Texture2D" uid="uid://dpj2nonlvydm7" path="res://resources/icons/gold.tres" id="1_3fvhs"]
+[ext_resource type="Script" uid="uid://1gfbturgxo4p" path="res://resources/currencies/currency_resource.gd" id="1_5fq3h"]
+
+[resource]
+script = ExtResource("1_5fq3h")
+name = "Gold"
+stockpile = 500
+income = 10
+upkeep = -2
+icon = ExtResource("1_3fvhs")
+metadata/_custom_type_script = "uid://1gfbturgxo4p"
