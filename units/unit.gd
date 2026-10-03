@@ -1,22 +1,18 @@
 extends VBoxContainer
 
 ## The resource file that contains all of the unit statistics
-@export var base_unit_resource: UnitResource
-var unit_resource: UnitResource
+@export var unit_resource: UnitResource
 
 @onready var sprite = $Model/CombatSprite
 @onready var health = $Health
 
-func _ready():
-	if (base_unit_resource == null):
-		unit_resource = UnitResource.new()
-	else:
-		unit_resource = base_unit_resource.duplicate(true)
-	configure_unit()
+func _enter_tree():
+	if unit_resource == null: unit_resource = UnitResource.new()
+	_configure()
 
-func configure_unit():
-	health.configure(unit_resource)
-	sprite.configure(unit_resource)
+func _configure():
+	for child in get_children():
+		if child.has_method('_configure'): child._configure(unit_resource)
 	unit_resource.died.connect(_on_death)
 
 func update_health(amount: int):

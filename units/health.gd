@@ -4,24 +4,26 @@ const TEXT_RED: Texture2D = preload("res://resources/health_bar/red_health.tres"
 const TEXT_ORANGE: Texture2D = preload("res://resources/health_bar/orange_health.tres")
 const TEXT_GREEN: Texture2D = preload("res://resources/health_bar/green_health.tres")
 
-var _unit_resource: UnitResource
+var unit_resource: UnitResource
 var hovered: bool = false
 var current_health: int:
-	get: return _unit_resource.current_health
-	set(value): _unit_resource.current_health = value
+	get: return unit_resource.current_health
+	set(value): unit_resource.current_health = value
 var max_health: int:
-	get: return _unit_resource.max_health
+	get: return unit_resource.max_health
 	set(value): assert(false, "should not set max_health directly")
 var unit_name: String:
-	get: return _unit_resource.unit_name
+	get: return unit_resource.unit_name
 	set(value): assert(false, "should not set unit_name directly")
 @onready var health_bar = $HealthContainer/HealthBar
 @onready var health_label = $HealthContainer/HealthLabel
 
-func configure(unit_resource: UnitResource):
-	_unit_resource = unit_resource
+func _ready():
 	update_health_bar()
 	update_label()
+
+func _configure(resource: UnitResource):
+	unit_resource = resource
 
 func update_health(amount: int):
 	var new_health = current_health + amount
