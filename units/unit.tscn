@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bqbx4dmiirypo"]
 
 [ext_resource type="Script" uid="uid://lf43bydd2d7c" path="res://units/unit.gd" id="1_gam5a"]
-[ext_resource type="SpriteFrames" uid="uid://00877x1wkl23" path="res://resources/units/squire/squire_animations.tres" id="2_hkgx6"]
+[ext_resource type="Script" uid="uid://d2pbfprgwhdtm" path="res://units/model.gd" id="2_3nj72"]
 [ext_resource type="Script" uid="uid://b0d68q3ydd4wa" path="res://units/health.gd" id="2_sepsr"]
 [ext_resource type="Script" uid="uid://c3jwlydaaltp4" path="res://units/combat_sprite.gd" id="3_33c7x"]
 [ext_resource type="Texture2D" uid="uid://bxfk4nwhkoofu" path="res://resources/health_bar/green_health.tres" id="4_33c7x"]
@@ -26,11 +26,10 @@ custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+script = ExtResource("2_3nj72")
 
 [node name="CombatSprite" type="AnimatedSprite2D" parent="Model" unique_id=854922376]
 scale = Vector2(5, 5)
-sprite_frames = ExtResource("2_hkgx6")
-animation = &"attack"
 centered = false
 script = ExtResource("3_33c7x")
 

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="UnitActionResource" format=3 uid="uid://k8lrnjjss1vm"]
+
+[ext_resource type="Script" uid="uid://bfjk6rjnd8bcc" path="res://resources/effects/effect_resource.gd" id="1_vxyy4"]
+[ext_resource type="Script" uid="uid://ci1ypu4k1l7dk" path="res://resources/effects/damage_effect_resource.gd" id="2_g8mrq"]
+[ext_resource type="Script" uid="uid://dr17adaabc4ry" path="res://resources/units/unit_action_resource.gd" id="3_rddji"]
+
+[sub_resource type="Resource" id="Resource_x1e43"]
+script = ExtResource("2_g8mrq")
+damage = 1
+damage_type = 3
+effect_range = 1
+metadata/_custom_type_script = "uid://ci1ypu4k1l7dk"
+
+[resource]
+script = ExtResource("3_rddji")
+action_name = "Bone Stare"
+description = "Skeleton instills fear on the target"
+effects = Array[ExtResource("1_vxyy4")]([SubResource("Resource_x1e43")])
+metadata/_custom_type_script = "uid://dr17adaabc4ry"
