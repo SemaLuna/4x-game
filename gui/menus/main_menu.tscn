@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dkruv8b44delk"]
 
 [ext_resource type="Script" uid="uid://lku7361duywx" path="res://gui/menus/main_menu.gd" id="1_at0em"]
-[ext_resource type="Script" uid="uid://brigpsw27r62g" path="res://gui/menus/quit.gd" id="1_xk52o"]
 [ext_resource type="PackedScene" uid="uid://b6ewgd62n8tnp" path="res://gui/menus/sub_menus/option_menu_buttons.tscn" id="3_7o4j2"]
 
 [node name="MainMenu" type="CenterContainer" unique_id=1229973417]
@@ -31,7 +30,6 @@ text = "Options"
 [node name="Quit" type="Button" parent="MainMenuButtons" unique_id=1683070438]
 layout_mode = 2
 text = "Quit"
-script = ExtResource("1_xk52o")
 
 [node name="OptionMenuButtons" parent="." unique_id=1090246467 instance=ExtResource("3_7o4j2")]
 visible = false
@@ -40,5 +38,6 @@ layout_mode = 2
 [connection signal="pressed" from="MainMenuButtons/StartCombat" to="." method="_on_start_combat_pressed"]
 [connection signal="pressed" from="MainMenuButtons/StartShopping" to="." method="_on_start_shopping_pressed"]
 [connection signal="pressed" from="MainMenuButtons/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MainMenuButtons/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="MainMenuButtons/Quit" to="MainMenuButtons/Quit" method="_on_pressed"]
 [connection signal="back_button_pressed" from="OptionMenuButtons" to="." method="_on_option_menu_buttons_back_button_pressed"]

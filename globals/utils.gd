@@ -1,6 +1,11 @@
 extends Node
 
-enum SceneNames {Main, Shop, Combat}
+enum SceneNames {Main, Combat, Shop}
 
-func change_world(scene_name: SceneNames):
-	return get_tree().root.get_node('Main/GameWorld').change_world(scene_name)
+var _main: Node
+
+func _ready() -> void:
+	_main = get_tree().root.get_node('Main')
+
+func change_scene(scene_name: SceneNames):
+	return _main.change_scene(scene_name)
