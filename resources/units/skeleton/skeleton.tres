@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UnitResource" format=3 uid="uid://dlokxix40q238"]
+
+[ext_resource type="Script" uid="uid://dr17adaabc4ry" path="res://resources/units/unit_action_resource.gd" id="1_eea0x"]
+[ext_resource type="Resource" uid="uid://k8lrnjjss1vm" path="res://resources/units/skeleton/bone_stare.tres" id="2_jeqwc"]
+[ext_resource type="Script" uid="uid://de12ftul028du" path="res://resources/units/unit_resource.gd" id="3_4r33v"]
+[ext_resource type="SpriteFrames" uid="uid://kjektkvpetdj" path="res://resources/units/skeleton/skeleton_animations.tres" id="3_6t568"]
+
+[resource]
+script = ExtResource("3_4r33v")
+unit_name = "Skeleton"
+max_health = 50
+current_health = 50
+animations = ExtResource("3_6t568")
+actions = Array[ExtResource("1_eea0x")]([ExtResource("2_jeqwc")])
+metadata/_custom_type_script = "uid://de12ftul028du"

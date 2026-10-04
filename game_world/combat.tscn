@@ -4,17 +4,7 @@
 [ext_resource type="Script" uid="uid://dgts6td2vl573" path="res://units/combat.gd" id="1_kphvw"]
 [ext_resource type="Script" uid="uid://de12ftul028du" path="res://resources/units/unit_resource.gd" id="2_hjfqo"]
 [ext_resource type="Resource" uid="uid://dba5hk4navdnh" path="res://resources/units/squire/squire.tres" id="3_8rq5b"]
-[ext_resource type="Script" uid="uid://dr17adaabc4ry" path="res://resources/units/unit_action_resource.gd" id="4_1v07c"]
-[ext_resource type="Resource" uid="uid://t0h46ep8pxe4" path="res://resources/units/squire/sword_slash.tres" id="4_31h1f"]
-[ext_resource type="SpriteFrames" uid="uid://00877x1wkl23" path="res://resources/units/squire/squire_animations.tres" id="5_1v07c"]
-
-[sub_resource type="Resource" id="Resource_c0gmw"]
-script = ExtResource("2_hjfqo")
-unit_name = "Squire"
-max_health = 100
-current_health = 20
-actions = Array[ExtResource("4_1v07c")]([ExtResource("4_31h1f")])
-metadata/_custom_type_script = "uid://de12ftul028du"
+[ext_resource type="Resource" uid="uid://dlokxix40q238" path="res://resources/units/skeleton/skeleton.tres" id="4_hjfqo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gjdf6"]
 texture = ExtResource("1_fja2v")
@@ -383,7 +373,7 @@ sources/0 = SubResource("TileSetAtlasSource_0ngxc")
 [node name="Combat" type="Node2D" unique_id=573410833]
 script = ExtResource("1_kphvw")
 ally_army_resources = Array[ExtResource("2_hjfqo")]([ExtResource("3_8rq5b")])
-enemy_army_resources = Array[ExtResource("2_hjfqo")]([SubResource("Resource_c0gmw")])
+enemy_army_resources = Array[ExtResource("2_hjfqo")]([ExtResource("4_hjfqo")])
 metadata/_edit_lock_ = true
 
 [node name="LowGround" type="TileMapLayer" parent="." unique_id=680505373]
