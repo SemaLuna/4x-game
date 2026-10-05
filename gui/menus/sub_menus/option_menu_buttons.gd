@@ -2,7 +2,7 @@ extends VBoxContainer
 
 signal back_button_pressed
 
-@onready var _slider = $Volume/Slider
+@onready var _slider: HSlider = $Volume/Slider
 
 func _ready() -> void:
 	_slider.value = MusicPlayer.volume_linear * 100

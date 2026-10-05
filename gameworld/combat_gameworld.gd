@@ -11,14 +11,14 @@ signal unit_selected(scene: UnitScene)
 var ally_army: Array
 var enemy_army: Array
 
-var unit_scene = load("res://units/unit.tscn")
+var unit_scene: PackedScene = load("res://units/unit.tscn")
 
-func _ready():
+func _ready() -> void:
 	configure_army(ally_army_resources, true)
 	configure_army(enemy_army_resources, false)
 
-func add_combat_unit(unit_resource: UnitResource, is_ally: bool):
-	var unit = unit_scene.instantiate()
+func add_combat_unit(unit_resource: UnitResource, is_ally: bool) -> void:
+	var unit: UnitScene = unit_scene.instantiate()
 	unit.unit_resource = unit_resource
 	unit.unit_clicked.connect(unit_clicked)
 	add_child(unit)
@@ -32,9 +32,9 @@ func add_combat_unit(unit_resource: UnitResource, is_ally: bool):
 		enemy_army.append(unit)
 
 
-func configure_army(army_resources: Array[UnitResource], is_ally_army: bool):
+func configure_army(army_resources: Array[UnitResource], is_ally_army: bool) -> void:
 	for resource in army_resources:
 		add_combat_unit(resource, is_ally_army)
 
-func unit_clicked(scene: UnitScene):
+func unit_clicked(scene: UnitScene) -> void:
 	unit_selected.emit(scene)

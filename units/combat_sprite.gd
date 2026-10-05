@@ -1,9 +1,9 @@
 extends AnimatedSprite2D
 
-func _ready():
+func _ready() -> void:
 	play("idle")
 
-func _configure(unit_resource: UnitResource):
+func _configure(unit_resource: UnitResource) -> void:
 	sprite_frames = unit_resource.animations
 	unit_resource.hurt.connect(_on_hurt)
 	unit_resource.died.connect(_on_death)

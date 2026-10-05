@@ -14,6 +14,6 @@ func _shortcut_input(event: InputEvent) -> void:
 func _on_combat_menu_resume_pressed() -> void:
 	$CombatMenu.hide()
 
-func _on_unit_clicked(node: UnitScene):
+func _on_unit_clicked(node: UnitScene) -> void:
 	print("I know that a unit has been selected!")
 	print(node.unit_resource.unit_name)
