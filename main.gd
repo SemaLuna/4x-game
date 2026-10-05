@@ -10,16 +10,16 @@ const SCENE_TO_GUI_MAP: Dictionary[Utils.SceneNames, String] = {
 }
 var _player: PlayerResource
 
-@onready var gw = $GameWorld
-@onready var gui = $GUI
+@onready var gw: Node2D = $GameWorld
+@onready var gui: CanvasLayer = $GUI
 
 func _ready() -> void:
 	change_scene(Utils.SceneNames.Main)
 
 func change_scene(scene_name: Utils.SceneNames) -> void:
 	initialize_resources(scene_name)
-	var gw_scene = initialize_scene(SCENE_TO_WORLD_MAP, scene_name)
-	var gui_scene = initialize_scene(SCENE_TO_GUI_MAP, scene_name)
+	var gw_scene: Node = initialize_scene(SCENE_TO_WORLD_MAP, scene_name)
+	var gui_scene: Node = initialize_scene(SCENE_TO_GUI_MAP, scene_name)
 	if (gw_scene != null) && (gui_scene != null):
 		configure_communication(gw_scene, gui_scene)
 	swap_child(gw, gw_scene)
@@ -35,15 +35,15 @@ func initialize_resources(scene_name: Utils.SceneNames) -> void:
 func initialize_scene(mapping: Dictionary[Utils.SceneNames, String], scene_name: Utils.SceneNames) -> Node:
 	var instance: Node = null
 	if (mapping.has(scene_name)):
-		var scene = load(mapping[scene_name])
+		var scene: PackedScene = load(mapping[scene_name])
 		instance = scene.instantiate()
 	return instance
 
-func configure_communication(gw_scene: Node, gui_scene: Node):
-	if ('gui' in gw_scene): gw_scene.gui = gui_scene
-	if ('gw' in gui_scene): gui_scene.gw = gw_scene
+func configure_communication(gw_scene: Node, gui_scene: Node) -> void:
+	if ("gui" in gw_scene): gw_scene.gui = gui_scene
+	if ("gw" in gui_scene): gui_scene.gw = gw_scene
 
-func swap_child(parent_node: Node, child_node: Node):
+func swap_child(parent_node: Node, child_node: Node) -> void:
 	for child in parent_node.get_children():
 		child.queue_free()
 	if (child_node != null): parent_node.add_child(child_node)

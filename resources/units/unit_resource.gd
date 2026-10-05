@@ -11,7 +11,7 @@ signal hurt
 ## The current health points of the unit
 @export var current_health: int = 999:
     set(new_health):
-        var amount = new_health - current_health
+        var amount: int = new_health - current_health
         current_health = new_health
         if (amount > 0):
             #TODO healing signal

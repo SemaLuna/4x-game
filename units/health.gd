@@ -15,27 +15,27 @@ var max_health: int:
 var unit_name: String:
 	get: return unit_resource.unit_name
 	set(value): assert(false, "should not set unit_name directly")
-@onready var health_bar = $HealthContainer/HealthBar
-@onready var health_label = $HealthContainer/HealthLabel
+@onready var health_bar: TextureProgressBar = $HealthContainer/HealthBar
+@onready var health_label: Label = $HealthContainer/HealthLabel
 
-func _ready():
+func _ready() -> void:
 	update_health_bar()
 	update_label()
 
-func _configure(resource: UnitResource):
+func _configure(resource: UnitResource) -> void:
 	unit_resource = resource
 
-func update_health(amount: int):
-	var new_health = current_health + amount
+func update_health(amount: int) -> void:
+	var new_health: int = current_health + amount
 	if (new_health < 0): new_health = 0
 	else: if (new_health > max_health): new_health = max_health
 	current_health = new_health
 	update_health_bar()
 	update_label()
 
-func update_health_bar():
+func update_health_bar() -> void:
 	health_label.text = str(current_health)
-	var percent_health = (float(current_health) / max_health) * 100
+	var percent_health: float = (float(current_health) / max_health) * 100
 	health_bar.value = percent_health
 	if percent_health < 30.0:
 		health_bar.set_progress_texture(TEXT_RED)
@@ -44,7 +44,7 @@ func update_health_bar():
 	else:
 		health_bar.set_progress_texture(TEXT_GREEN)
 
-func update_label():
+func update_label() -> void:
 	health_label.text = unit_name if hovered else str(current_health)
 
 func _on_health_label_mouse_entered() -> void:
