@@ -2,6 +2,12 @@
 
 [ext_resource type="Script" uid="uid://nbin6a1rnjfs" path="res://gui/menus/sub_menus/option_menu_buttons.gd" id="1_y56et"]
 
+[sub_resource type="InputEventAction" id="InputEventAction_pqu38"]
+action = &"ESC"
+
+[sub_resource type="Shortcut" id="Shortcut_xe1nl"]
+events = [SubResource("InputEventAction_pqu38")]
+
 [node name="OptionMenuButtons" type="VBoxContainer" unique_id=1090246467]
 script = ExtResource("1_y56et")
 
@@ -24,6 +30,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+shortcut = SubResource("Shortcut_xe1nl")
 text = "Back"
 
 [connection signal="value_changed" from="Volume/Slider" to="." method="_on_slider_value_changed"]

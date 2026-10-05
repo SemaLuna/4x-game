@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://2ku62sskylun"]
+
+[ext_resource type="Script" uid="uid://cfjnsx60xd2jj" path="res://gui/combat_gui.gd" id="1_k1vfn"]
+[ext_resource type="PackedScene" uid="uid://8poyq7jvcjoy" path="res://gui/menus/combat_menu.tscn" id="2_ss7xr"]
+
+[node name="CombatUI" type="Control" unique_id=352832343]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k1vfn")
+
+[node name="CombatMenu" parent="." unique_id=1229973417 instance=ExtResource("2_ss7xr")]
+visible = false
+layout_mode = 1
+
+[connection signal="resume_pressed" from="CombatMenu" to="." method="_on_combat_menu_resume_pressed"]

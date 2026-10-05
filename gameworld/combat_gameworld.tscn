@@ -1,13 +1,13 @@
 [gd_scene format=4 uid="uid://05u6jg3fnijj"]
 
-[ext_resource type="Texture2D" uid="uid://cu8rxrv6xbytw" path="res://assets/external/visual/fantasy_ [version 2.0]/swamp_/swamp_.png" id="1_fja2v"]
-[ext_resource type="Script" uid="uid://dgts6td2vl573" path="res://units/combat.gd" id="1_kphvw"]
-[ext_resource type="Script" uid="uid://de12ftul028du" path="res://resources/units/unit_resource.gd" id="2_hjfqo"]
-[ext_resource type="Resource" uid="uid://dba5hk4navdnh" path="res://resources/units/squire/squire.tres" id="3_8rq5b"]
-[ext_resource type="Resource" uid="uid://dlokxix40q238" path="res://resources/units/skeleton/skeleton.tres" id="4_hjfqo"]
+[ext_resource type="Script" uid="uid://dgts6td2vl573" path="res://gameworld/combat_gameworld.gd" id="1_q17rd"]
+[ext_resource type="Script" uid="uid://de12ftul028du" path="res://resources/units/unit_resource.gd" id="2_e0vbb"]
+[ext_resource type="Resource" uid="uid://dba5hk4navdnh" path="res://resources/units/squire/squire.tres" id="3_58cuy"]
+[ext_resource type="Resource" uid="uid://dlokxix40q238" path="res://resources/units/skeleton/skeleton.tres" id="4_fyxyq"]
+[ext_resource type="Texture2D" uid="uid://cu8rxrv6xbytw" path="res://assets/external/visual/fantasy_ [version 2.0]/swamp_/swamp_.png" id="5_t2cg4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gjdf6"]
-texture = ExtResource("1_fja2v")
+texture = ExtResource("5_t2cg4")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
@@ -189,7 +189,7 @@ terrain_set_0/terrain_0/color = Color(0.39330617, 0.5450888, 0.30712414, 1)
 sources/0 = SubResource("TileSetAtlasSource_gjdf6")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ngxc"]
-texture = ExtResource("1_fja2v")
+texture = ExtResource("5_t2cg4")
 1:1/0 = 0
 1:1/0/terrain_set = 0
 1:1/0/terrains_peering_bit/bottom_right_corner = 0
@@ -370,10 +370,10 @@ terrain_set_0/terrain_0/name = "GrassOnGrass"
 terrain_set_0/terrain_0/color = Color(0.63418555, 0.17902696, 0.41174185, 1)
 sources/0 = SubResource("TileSetAtlasSource_0ngxc")
 
-[node name="Combat" type="Node2D" unique_id=573410833]
-script = ExtResource("1_kphvw")
-ally_army_resources = Array[ExtResource("2_hjfqo")]([ExtResource("3_8rq5b")])
-enemy_army_resources = Array[ExtResource("2_hjfqo")]([ExtResource("4_hjfqo")])
+[node name="CombatGameworld" type="Node2D" unique_id=573410833]
+script = ExtResource("1_q17rd")
+ally_army_resources = Array[ExtResource("2_e0vbb")]([ExtResource("3_58cuy")])
+enemy_army_resources = Array[ExtResource("2_e0vbb")]([ExtResource("4_fyxyq")])
 metadata/_edit_lock_ = true
 
 [node name="LowGround" type="TileMapLayer" parent="." unique_id=680505373]
