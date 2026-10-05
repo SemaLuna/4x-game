@@ -19,10 +19,4 @@ func _on_quit_pressed() -> void:
 	get_tree().quit(0)
 
 func _on_start_combat_pressed() -> void:
-	change_scene(Utils.SceneNames.Combat)
-
-func _on_start_shopping_pressed() -> void:
-	change_scene(Utils.SceneNames.Shop)
-
-func change_scene(scene_name: Utils.SceneNames):
-	Utils.change_scene(scene_name)
+	Utils.change_scene(Utils.SceneNames.Combat)

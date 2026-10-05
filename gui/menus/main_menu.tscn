@@ -19,10 +19,6 @@ layout_mode = 2
 layout_mode = 2
 text = "Start Combat"
 
-[node name="StartShopping" type="Button" parent="MainMenuButtons" unique_id=13365269]
-layout_mode = 2
-text = "Start Shopping"
-
 [node name="Options" type="Button" parent="MainMenuButtons" unique_id=345873185]
 layout_mode = 2
 text = "Options"
@@ -36,8 +32,6 @@ visible = false
 layout_mode = 2
 
 [connection signal="pressed" from="MainMenuButtons/StartCombat" to="." method="_on_start_combat_pressed"]
-[connection signal="pressed" from="MainMenuButtons/StartShopping" to="." method="_on_start_shopping_pressed"]
 [connection signal="pressed" from="MainMenuButtons/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MainMenuButtons/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="MainMenuButtons/Quit" to="MainMenuButtons/Quit" method="_on_pressed"]
 [connection signal="back_button_pressed" from="OptionMenuButtons" to="." method="_on_option_menu_buttons_back_button_pressed"]

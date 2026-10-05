@@ -1,4 +1,7 @@
+class_name UnitScene
 extends VBoxContainer
+
+signal unit_clicked(scene: UnitScene)
 
 ## The resource file that contains all of the unit statistics
 @export var unit_resource: UnitResource
@@ -28,3 +31,8 @@ func complete_action(action: UnitActionResource):
 
 func get_action():
 	return unit_resource.actions
+
+func _on_area_2d_input_event(viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	if event.is_action_pressed('LEFT_CLICK'):
+		unit_clicked.emit(self)
+		viewport.set_input_as_handled()

@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://8poyq7jvcjoy"]
+
+[ext_resource type="Script" uid="uid://bk71ff2tadn4a" path="res://gui/menus/combat_menu.gd" id="1_xw0la"]
+[ext_resource type="PackedScene" uid="uid://b6ewgd62n8tnp" path="res://gui/menus/sub_menus/option_menu_buttons.tscn" id="2_cwdpt"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_7o4j2"]
+action = &"ESC"
+
+[sub_resource type="Shortcut" id="Shortcut_at0em"]
+events = [SubResource("InputEventAction_7o4j2")]
+
+[node name="CombatMenu" type="CenterContainer" unique_id=1229973417]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xw0la")
+
+[node name="CombatMenuButtons" type="VBoxContainer" parent="." unique_id=1952616692]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="CombatMenuButtons" unique_id=2116688947]
+layout_mode = 2
+shortcut = SubResource("Shortcut_at0em")
+text = "Resume"
+
+[node name="Options" type="Button" parent="CombatMenuButtons" unique_id=345873185]
+layout_mode = 2
+text = "Options"
+
+[node name="Exit" type="Button" parent="CombatMenuButtons" unique_id=1683070438]
+layout_mode = 2
+text = "Exit"
+
+[node name="OptionMenuButtons" parent="." unique_id=1090246467 instance=ExtResource("2_cwdpt")]
+visible = false
+layout_mode = 2
+
+[connection signal="pressed" from="CombatMenuButtons/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="CombatMenuButtons/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="CombatMenuButtons/Exit" to="." method="_on_exit_pressed"]
+[connection signal="back_button_pressed" from="OptionMenuButtons" to="." method="_on_option_menu_buttons_back_button_pressed"]

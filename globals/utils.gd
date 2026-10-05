@@ -1,6 +1,6 @@
 extends Node
 
-enum SceneNames {Main, Combat, Shop}
+enum SceneNames {Main, Combat}
 
 var _main: Node
 
